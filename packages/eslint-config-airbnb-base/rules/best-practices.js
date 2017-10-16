@@ -56,8 +56,10 @@ module.exports = {
     // http://eslint.org/docs/rules/no-div-regex
     'no-div-regex': 'off',
 
-    // disallow else after a return in an if
-    'no-else-return': 'error',
+    // disallow else after a return in an if or else if
+    'no-else-return': ['error', {
+      allowElseIf: false
+    }],
 
     // disallow empty functions, except for standalone funcs/arrows
     // http://eslint.org/docs/rules/no-empty-function
